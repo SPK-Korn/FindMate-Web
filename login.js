@@ -3,6 +3,7 @@ var express = require('express');
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var path = require('path');
+const { response, static } = require('express');
 
 
 /** create connection */
@@ -25,10 +26,9 @@ app.use(session({
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-
-app.get('/',function(request, response) {
-    response.sendFile(path.join(__dirname + '/index.html'));
-});
+/** sent all file Webpage to client */
+app.use(express.static(path.join(__dirname)));
+/**  ***************************    */
 
 
 app.post('/auth', function(request, response) {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FindMate</title>
     <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/popupform.css">
 </head>
 
 <body>
@@ -38,13 +39,39 @@
                                                 <button value="login" class="_loginbtn " name="login" type="submit">Login</button>
                                             </div>
                                             <div class="_6ltj">
-                                                <a href="#######">fogot your password ?</a>
+                                                <a onclick="document.getElementById('id').style.display='block'" style="width: auto;">fogot your password ?</a>
+                                                </div>
                                             </div>
                                             <div class="_8icz"></div>
                                             <div class="_6ltg">
                                                 <a href="#" role="button" class="signup" id="u_0_2" rel="async">Sign Up</a>
                                             </div>
                                         </form>
+                                        <div id="id" class="modal">
+                                            <form class="animate _popup " action="reminder" method="POST">
+                                                <div class="_6luv _52jv">
+                                                    <div>
+                                                        <h4 class="_txtchange">Please Enter your email what you want to change your Password</h1>
+                                                    </div>
+                                                    <div class="_6lux">
+                                                        <input type="text" class="inputtext _55r1 _6luy" placeholder="Enter Email" name="Email" required>
+                                                    </div>
+                                                    <div>
+                                                        <button value="submit" class="_loginbtn" name="Submit" type="submit">Submit</button>
+                                                    </div>
+                                                </div>
+                                                <script>
+                                                    // Get the modal
+                                                    var modal = document.getElementById('id');
+                                                    
+                                                    // When the user clicks anywhere outside of the modal, close it
+                                                    window.onclick = function(event) {
+                                                        if (event.target == modal) {
+                                                            modal.style.display = "none";
+                                                        }
+                                                    }
+                                                    </script>
+                                            </form>
                                     </div>
                                 </div>
                             </div>
